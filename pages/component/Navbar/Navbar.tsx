@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   return (
     <nav>
-      <ul className="flex items-center gap-5 uppercase">
+      <ul className="flex items-center gap-5 uppercase relative z-50">
       <div className="group">
           <button className=" px-3 py-1 flex items-center min-w-32">
             <span className="pr-1 font-semibold flex-1 uppercase">Products for none-residents</span>
