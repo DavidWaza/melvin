@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
 import Container from "../Container/Container";
+import MobileNavbar from "./MobileNavbar/MobileNavbar";
 
 const Header = () => {
   return (
@@ -10,7 +11,12 @@ const Header = () => {
           <Link href="/" className="logo">
             Logo
           </Link>
-          <Navbar />
+          <div className="lg:block hidden">
+            <Navbar />
+          </div>
+          <div className="lg:hidden block">
+            <MobileNavbar />
+          </div>
         </Container>
       </div>
     </header>
