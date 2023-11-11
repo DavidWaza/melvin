@@ -2,7 +2,7 @@ import React from 'react';
 
 const TableResponsive = () => {
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 w-full">
       <table className="min-w-full bg-white">
         <thead>
           <tr>
