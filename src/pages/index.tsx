@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Header from "../component/Navbar/Navbar";
+import Header from "../component/Navbar/Header";
 import Carousel from "../component/Carousel/Carousel";
 import Container from "../component/Container/Container";
 import ExchangeRate from "../component/ExchangeComponent/ExchangeRate";
