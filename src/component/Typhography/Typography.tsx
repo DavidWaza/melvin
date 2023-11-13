@@ -4,6 +4,7 @@ import React from "react";
 interface HeadingProps {
   variant: "small" | "medium" | "large" | "xlarge";
   children: React.ReactNode;
+  className?:string
 }
 
 const baseStyles = `
@@ -11,7 +12,7 @@ font-style:normal;
 text-[#191C2D]
 `;
 
-const Heading: React.FC<HeadingProps> = ({ variant, children }) => {
+const Heading: React.FC<HeadingProps> = ({ variant, children, className }) => {
   let fontSize = "text-[36px]";
   let lineHeight = "leading-[36px]";
   let letterSpacing = `tracking[-1.125px]`;
@@ -40,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({ variant, children }) => {
 
   return (
     <h1
-      className={`${baseStyles} ${fontSize} ${lineHeight} ${letterSpacing} ${fontWeight}`}
+      className={`${baseStyles} ${fontSize} ${lineHeight} ${letterSpacing} ${fontWeight} ${className}`}
     >
       {children}
     </h1>
