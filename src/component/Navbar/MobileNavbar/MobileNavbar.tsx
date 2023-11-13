@@ -6,7 +6,7 @@ const MobileNavbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="flex justify-end">
-      <button onClick={() => setToggle(!toggle)}>
+      <button onClick={() => console.log('click')}>
         {toggle ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,6 @@ const MobileNavbar = () => {
             data={dataNav}
             status={false}
             toggleStatus={false}
-            
           />
           <Accordion
             header={contactheader}
