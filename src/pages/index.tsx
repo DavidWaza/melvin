@@ -6,21 +6,18 @@ import ExchangeRate from "../component/ExchangeComponent/ExchangeRate";
 import BodyText from "../component/BodyText/BodyText";
 import Slider from "../component/Slider/Slider";
 import Footer from "../component/Footer/Footer";
-import Layout from "./layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={`${inter.className}`}>
-      <Layout>
         <Carousel />
         <Container>
           <ExchangeRate />
           <Slider />
         </Container>
         <BodyText />
-      </Layout>
     </main>
   );
 }

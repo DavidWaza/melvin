@@ -7,7 +7,7 @@ export const onlineheader = ["Online bank"]
 export const dataNav = [
   {
     title: "for investors",
-    link: '/src/pages/investors/index.tsx'
+    link: '/investors'
   },
   {
     title: "for representative officers",
@@ -16,6 +16,6 @@ export const dataNav = [
   },
   {
     title: "for gurantors",
-    link:"/src/pages/grantors/index.tsx"
+    link:"/grantors"
   },
 ];
