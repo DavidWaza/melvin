@@ -15,33 +15,31 @@ const Slider = () => {
   return (
     <div className="mt-[10rem]">
       <Swiper
-        slidesPerView={3}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }}
-        spaceBetween={30}
-        centeredSlides={true}
+         slidesPerView={1}
+         centeredSlides={false}
+         slidesPerGroupSkip={1}
+         grabCursor={true}
+         keyboard={{
+           enabled: true,
+         }}
+         breakpoints={{
+           769: {
+             slidesPerView: 2,
+             slidesPerGroup: 2,
+           },
+         }}
+         scrollbar={true}
+         navigation={true}
+         pagination={{
+           clickable: true,
+         }}
+         className="mySwiper"
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
+       
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <NewsComponent articles={[]} />
