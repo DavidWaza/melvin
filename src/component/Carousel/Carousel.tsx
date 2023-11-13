@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import {Autoplay, Pagination, Navigation } from "swiper/modules";
 const Carousel = () => {
   return (
     <div>
@@ -15,8 +15,12 @@ const Carousel = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay,Pagination, Navigation]}
         navigation={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="mySwiper"
       >
         <SwiperSlide>

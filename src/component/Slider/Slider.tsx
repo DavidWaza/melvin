@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import NewsComponent from "../NewsComponent/NewsComponent";
 
 // import required modules
 
@@ -16,19 +17,19 @@ const Slider = () => {
       <Swiper
         slidesPerView={3}
         breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }}
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -43,19 +44,19 @@ const Slider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <ExchangeRate />
+          <NewsComponent articles={[]} />
         </SwiperSlide>
         <SwiperSlide>
-          <ExchangeRate />
+          <NewsComponent articles={[]} />
         </SwiperSlide>
         <SwiperSlide>
-          <ExchangeRate />
+          <NewsComponent articles={[]} />
         </SwiperSlide>
         <SwiperSlide>
-          <ExchangeRate />
+          <NewsComponent articles={[]} />
         </SwiperSlide>
         <SwiperSlide>
-          <ExchangeRate />
+          <NewsComponent articles={[]} />
         </SwiperSlide>
       </Swiper>
     </div>
