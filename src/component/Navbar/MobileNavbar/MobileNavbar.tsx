@@ -6,7 +6,8 @@ const MobileNavbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="flex justify-end">
-      <button onClick={() => console.log('click')}>
+      <button onClick={() => setToggle(!toggle)}>
+        
         {toggle ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <main className={`${inter.className}`}>
       <Layout>
-      <Carousel />
-      <Container>
-        <ExchangeRate />
-        <Slider />
-      </Container>
-      <BodyText />
+        <Carousel />
+        <Container>
+          <ExchangeRate />
+          <Slider />
+        </Container>
+        <BodyText />
       </Layout>
     </main>
   );
