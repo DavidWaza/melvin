@@ -13,7 +13,7 @@ interface NewsProps {
   articles: Article[];
 }
 
-const NewsComponent: FC<NewsProps> = ({ data }) => {
+const NewsComponent: FC<NewsProps> = () => {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
@@ -31,7 +31,6 @@ const NewsComponent: FC<NewsProps> = ({ data }) => {
     fetchData();
   }, []);
 
-  console.log(data)
   return (
     <div className="h-screen border border-slate-100">
       <div className="bg-blue-800 p-5">

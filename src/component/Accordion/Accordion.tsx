@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Text } from "../Typhography/Typography";
 import { useToggle } from "../Hooks/useToggle/useToggle";
+import Link from "next/link";
 
 interface accordionProps {
   header: string[];
   subheader?: string;
   data: {
     title: string;
-    status: string;
+    link: string;
   }[];
   status: boolean;
   toggleStatus: boolean;
 }
+
 const Accordion = ({ header, data, subheader }: accordionProps) => {
   const { status: expand, toggleStatus: toggleExpand } = useToggle();
 
@@ -64,17 +66,13 @@ const Accordion = ({ header, data, subheader }: accordionProps) => {
       {expand && (
         <div>
           {data.map((rowData, index) => (
-            <div
-              key={index}
-              className="mt-10 flex justify-between border-b border-slate-200 pb-4"
-            >
-              <div>
-                <Text variant="extrasmall">{rowData.title}</Text>
-                <Text variant="small">
-                  <span className="text-slate-300">{rowData.status}</span>
-                </Text>
+              <div key={index} className="mt-10 flex justify-between border-b border-slate-200 pb-4">
+                <div>
+                  <Link href={rowData.link}>
+                  <Text variant="extrasmall">{rowData.title}</Text>
+                  </Link>
+                </div>
               </div>
-            </div>
           ))}
         </div>
       )}

@@ -46,6 +46,7 @@ const MobileNavbar = () => {
             data={dataNav}
             status={false}
             toggleStatus={false}
+            
           />
           <Accordion
             header={contactheader}

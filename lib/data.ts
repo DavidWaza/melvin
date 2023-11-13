@@ -1,7 +1,5 @@
 export const header = [
   "Products for none-residents",
-//   "contacts",
-//   "online bank",
 ];
 export const contactheader = ["Contacts"]
 export const onlineheader = ["Online bank"]
@@ -9,14 +7,15 @@ export const onlineheader = ["Online bank"]
 export const dataNav = [
   {
     title: "for investors",
-    status: "",
+    link: '/src/pages/investors/index.tsx'
   },
   {
     title: "for representative officers",
-    status: "",
+    link:"/src/pages/grantors/index.tsx"
+
   },
   {
     title: "for gurantors",
-    status: "",
+    link:"/src/pages/grantors/index.tsx"
   },
 ];
