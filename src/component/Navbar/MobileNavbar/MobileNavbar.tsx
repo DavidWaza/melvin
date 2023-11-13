@@ -40,7 +40,7 @@ const MobileNavbar = () => {
         )}
       </button>
       {toggle && (
-        <div className="absolute top-[5rem] right-0 left-0 px-[2rem] z-50 bg-white">
+        <div className="absolute top-[5rem] right-0 left-0 px-[2rem] z-[999] bg-white py-6">
           <Accordion
             header={header}
             data={dataNav}

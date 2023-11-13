@@ -25,14 +25,14 @@ const Carousel = () => {
       >
         <SwiperSlide>
           <div className="relative">
-            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
-            <img src="/assets/army.jpg" alt="" className="w-full" />
+            <div className="absolute top-0 left-0 bg-black h-screen w-full opacity-60"></div>
+            <img src="/assets/army.jpg" alt="" className="w-full h-screen" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
             <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
-            <img src="/assets/exim.jpg" alt="" className="w-full" />
+            <img src="/assets/exim.jpg" alt="" className="w-full h-screen" />
           </div>
         </SwiperSlide>
       </Swiper>
