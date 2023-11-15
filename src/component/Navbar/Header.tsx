@@ -9,7 +9,7 @@ const Header = () => {
       <div>
         <Container className="flex justify-between gap-5 h-[6rem] p-10 border-b border-slate-200 font-medium font-lexend uppercase">
           <Link href="/" className="logo">
-            Logo
+            Credit Agric
           </Link>
           <div className="lg:block hidden">
             <Navbar />

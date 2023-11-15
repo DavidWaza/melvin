@@ -1,27 +1,24 @@
-export const header = [
-  "Products for none-residents",
-];
-export const contactheader = ["Contacts"]
-export const onlineheader = ["Online bank"]
+export const header = ["Products for none-residents"];
+export const contactheader = ["Contacts"];
+export const onlineheader = ["Online bank"];
 
 export const dataNav = [
   {
     title: "for investors",
-    link: '/investors'
+    link: "/investors",
   },
   {
     title: "for representative officers",
-    link:"/src/pages/grantors/index.tsx"
-
+    link: "/src/pages/grantors/index.tsx",
   },
   {
     title: "for gurantors",
-    link:"/grantors"
+    link: "/grantors",
   },
 ];
 export const contactNav = [
   {
-    title:"Contact us",
-    link:"/contacts"
-  }
-]
+    title: "Contact us",
+    link: "/contacts",
+  },
+];

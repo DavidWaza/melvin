@@ -54,6 +54,36 @@ const Carousel = () => {
             <img src="/assets/exim.jpg" alt="" className="w-full h-screen" />
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative">
+            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
+            <Heading
+              variant="large"
+              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[8rem] text-white font-space"
+            >
+            Supervisory Board of Credit Agric
+            </Heading>
+            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] left-[5rem] text-white font-kanit">
+              Started it works
+            </Text>
+            <img src="/assets/fasad-banka-slides.jpg" alt="" className="w-full h-screen" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative">
+            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
+            <Heading
+              variant="large"
+              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[8rem] text-white font-space"
+            >
+            China Export & Credit Insurance Corporation
+            </Heading>
+            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] left-[5rem] text-white font-kanit">
+              Credit Agric entered into the framework Agreement of Cooperation.
+            </Text>
+            <img src="/assets/ukreximbank-entered-into-the-slides.jpg" alt="" className="w-full h-screen" />
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
