@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "../../Accordion/Accordion";
-import { header, dataNav, contactheader, onlineheader, contactNav } from "@/lib/data";
+import { header, dataNav, contactheader, onlineheader, contactNav, onlinebankNav } from "@/lib/data";
 import Link from "next/link";
 
 const MobileNavbar = () => {
@@ -60,7 +60,7 @@ const MobileNavbar = () => {
          
           <Accordion
             header={onlineheader}
-            data={dataNav}
+            data={onlinebankNav}
             status={false}
             toggleStatus={false}
           />

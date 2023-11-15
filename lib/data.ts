@@ -22,3 +22,9 @@ export const contactNav = [
     link: "/contacts",
   },
 ];
+export const onlinebankNav = [
+  {
+    title: "Online Bank",
+    link: "/online-bank",
+  },
+];
