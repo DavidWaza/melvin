@@ -160,6 +160,10 @@ li:hover>button svg {
 
 }
 
+.btn-anime {
+  transition: all .3s ease-in;
+}
+
 @media screen and (max-width:700px) {
   .swiper {
     height: 35vh;
