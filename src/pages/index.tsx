@@ -12,12 +12,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main className={`${inter.className}`}>
-        <Carousel />
-        <Container>
-          <ExchangeRate />
-          <Slider />
-        </Container>
-        <BodyText />
+      <Carousel />
+      <Container>
+        <ExchangeRate />
+        <Slider />
+      </Container>
+      <BodyText />
     </main>
   );
 }

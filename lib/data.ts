@@ -19,3 +19,9 @@ export const dataNav = [
     link:"/grantors"
   },
 ];
+export const contactNav = [
+  {
+    title:"Contact us",
+    link:"/contacts"
+  }
+]

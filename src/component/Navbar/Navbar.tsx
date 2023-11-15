@@ -110,38 +110,42 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="group">
-          <button className=" px-3 py-1 flex items-center min-w-32">
-            <span className="pr-1 font-semibold flex-1 uppercase">
-              Contacts
-            </span>
-            <span>
-              <svg
-                className="fill-current h-4 w-4 transform group-hover:-rotate-180
+          <Link href="/contacts">
+            <button className=" px-3 py-1 flex items-center min-w-32">
+              <span className="pr-1 font-semibold flex-1 uppercase">
+                Contacts
+              </span>
+              <span>
+                <svg
+                  className="fill-current h-4 w-4 transform group-hover:-rotate-180
         transition duration-150 ease-in-out"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
-            </span>
-          </button>
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </span>
+            </button>
+          </Link>
         </div>
         <div className="group">
-          <button className=" px-3 py-1 flex items-center min-w-32">
-            <span className="pr-1 font-semibold flex-1 uppercase">
-              Online bank
-            </span>
-            <span>
-              <svg
-                className="fill-current h-4 w-4 transform group-hover:-rotate-180
+          <Link href="online-bank">
+            <button className=" px-3 py-1 flex items-center min-w-32">
+              <span className="pr-1 font-semibold flex-1 uppercase">
+                Online bank
+              </span>
+              <span>
+                <svg
+                  className="fill-current h-4 w-4 transform group-hover:-rotate-180
         transition duration-150 ease-in-out"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
-            </span>
-          </button>
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </span>
+            </button>
+          </Link>
         </div>
       </ul>
     </nav>
