@@ -29,7 +29,7 @@ const Heading: React.FC<HeadingProps> = ({ variant, children, className }) => {
     letterSpacing = "tracking-normal";
     fontWeight = "font-bold";
   } else if (variant === "large") {
-    fontSize = "text-[33px] lg:text-[46px]";
+    fontSize = "text-[25px] lg:text-[46px]";
     lineHeight = "leading-[30px] lg:leading-[67px]";
     letterSpacing = "tracking-normal";
     fontWeight = "font-bold";
@@ -120,7 +120,7 @@ const Text: React.FC<TextProps> = ({
     fontSize = "text-[18px]";
     lineHeight = "leading-[20px]";
   } else if (variant === "large") {
-    fontSize = "lg:text-[30px] text-[25px]";
+    fontSize = "lg:text-[30px] text-[18px]";
     lineHeight = "lg:leading-[46px] leading-[30px]";
   }
 

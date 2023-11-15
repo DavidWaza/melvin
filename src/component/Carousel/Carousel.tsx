@@ -9,6 +9,31 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+const CarouselContent = [
+  {
+    title: "Support Ukraine",
+    subtitle: " government service and defence companies",
+    imgSrc: "/assets/army.jpg",
+  },
+  {
+    title: " Public letter",
+    subtitle: "  from Supervisory Board",
+    imgSrc: "/assets/exim.jpg",
+  },
+  {
+    title: "Supervisory Board of Credit Agric",
+    subtitle: "Started it works",
+    imgSrc: "/assets/fasad-banka-slides.jpg",
+  },
+
+  {
+    title: "China Export & Credit Insurance Corporation",
+    subtitle:
+      "Credit Agric entered into the framework Agreement of Cooperation.",
+    imgSrc: "/assets/ukreximbank-entered-into-the-slides.jpg",
+  },
+];
 const Carousel = () => {
   return (
     <div>
@@ -24,66 +49,26 @@ const Carousel = () => {
         }}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="relative">
-            <div className="absolute top-0 left-0 bg-black h-screen w-full opacity-60"></div>
-            <Heading
-              variant="large"
-              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[4rem] text-white font-space"
-            >
-              Support Ukraine
-            </Heading>
-            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] text-white font-kanit">
-              government service and defence companies
-            </Text>
-            <img src="/assets/army.jpg" alt="" className="w-full h-screen" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
-            <Heading
-              variant="large"
-              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[8rem] text-white font-space"
-            >
-             Public letter
-            </Heading>
-            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] left-[5rem] text-white font-kanit">
-              from Supervisory Board
-            </Text>
-            <img src="/assets/exim.jpg" alt="" className="w-full h-screen" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
-            <Heading
-              variant="large"
-              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[8rem] text-white font-space"
-            >
-            Supervisory Board of Credit Agric
-            </Heading>
-            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] left-[5rem] text-white font-kanit">
-              Started it works
-            </Text>
-            <img src="/assets/fasad-banka-slides.jpg" alt="" className="w-full h-screen" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative">
-            <div className="absolute top-0 left-0 bg-black h-full w-full opacity-60"></div>
-            <Heading
-              variant="large"
-              className="absolute lg:top-[10rem] lg:left-[10rem] top-[7rem] left-[8rem] text-white font-space"
-            >
-            China Export & Credit Insurance Corporation
-            </Heading>
-            <Text variant="large" className="absolute lg:top-[15rem] lg:left-[10rem] top-[10rem] left-[5rem] text-white font-kanit">
-              Credit Agric entered into the framework Agreement of Cooperation.
-            </Text>
-            <img src="/assets/ukreximbank-entered-into-the-slides.jpg" alt="" className="w-full h-screen" />
-          </div>
-        </SwiperSlide>
+        {CarouselContent.map((content, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full">
+              <div className="absolute top-0 left-0 bg-black h-screen w-full opacity-60"></div>
+              <Heading
+                variant="large"
+                className="absolute 2xl:top-[10rem] 2xl:left-[10rem] top-[7rem] right-0 left-0 bottom-0 m-auto text-white font-space"
+              >
+                {content.title}
+              </Heading>
+              <Text
+                variant="large"
+                className="absolute 2xl:top-[15rem] 2xl:left-[10rem] top-[11rem] right-0 left-0 bottom-0 m-auto  text-white font-kanit"
+              >
+                {content.subtitle}
+              </Text>
+              <img src={content.imgSrc} alt="" className="w-full h-screen" />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

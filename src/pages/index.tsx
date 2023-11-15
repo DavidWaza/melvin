@@ -12,9 +12,8 @@ export default function Home() {
   return (
     <main className={`${inter.className}`}>
       <Carousel />
-      <Container className="relative">
+      <Container>
         <ExchangeRate />
-       
         <Slider />
       </Container>
       <BodyText />
