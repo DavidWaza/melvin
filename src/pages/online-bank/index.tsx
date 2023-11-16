@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Text } from "@/src/component/Typhography/Typography";
+import { Heading, Text } from "@/src/component/Typhography/Typography";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mvojnqzr");
@@ -18,6 +18,8 @@ const ContactForm = () => {
   }
   return (
     <div className="max-w-2xl m-auto my-[10rem] px-5">
+      <Heading variant="large" className="font-kanit text-center">Credit Agric</Heading>
+      <Text className="text-center mb-10">Sign Up</Text>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -39,28 +41,54 @@ const ContactForm = () => {
           id="email"
           type="email"
           name="email"
-          placeholder="email"
+          placeholder="Email"
           className="w-full bg-white p-3 border border-slate-300 my-3"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <input
-          id="subject"
-          type="text"
+          id="account number"
+          type="number"
           name="subject"
-          placeholder="Subject"
+          placeholder="Account number"
           className="w-full bg-white p-3 border border-slate-300 my-3"
         />
 
         <ValidationError
-          prefix="Subject"
-          field="subject"
+          prefix="AccountNumber"
+          field="account number"
           errors={state.errors}
         />
+        <input
+          type="text"
+          placeholder="Enter desired Username"
+          className="w-full bg-white p-3 border border-slate-300 my-3"
+        />
+        <ValidationError
+          prefix="username"
+          field="username"
+          errors={state.errors}
+        />
+        <input
+          id="password"
+          type="password"
+          name="subject"
+          placeholder="Password"
+          className="w-full bg-white p-3 border border-slate-300 my-3"
+        />
+
+        <ValidationError
+          prefix="AccountNumber"
+          field="account number"
+          errors={state.errors}
+        />
+        <p className="text-slate-500">
+          (password should include uppercase, special characters and lowercase)
+        </p>
         <div className="flex flex-col w-full md:w-[40%] xl:w-[20%] mt-10">
           <button
             type="submit"
             disabled={state.submitting}
-            className="border border-slate-600 px-4 py-2 bg-blue-800 text-white"
+            className={`border border-slate-600 px-4 py-2  text-white ${!state.submitting ? 'bg-slate-200 cursor-not-allowed text-black' : 'bg-blue-800'}`}
           >
             Submit
           </button>
