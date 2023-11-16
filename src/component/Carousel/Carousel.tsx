@@ -2,12 +2,10 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Text, Title, Heading } from "../Typhography/Typography";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const CarouselContent = [
@@ -55,13 +53,13 @@ const Carousel = () => {
               <div className="absolute top-0 left-0 bg-black h-screen w-full opacity-60"></div>
               <Heading
                 variant="large"
-                className="absolute 2xl:top-[10rem] 2xl:left-[10rem] top-[7rem] right-0 left-0 bottom-0 m-auto text-white font-space"
+                className="absolute 2xl:top-[10rem] top-[7rem] right-0 left-0 bottom-0 m-auto text-white font-space"
               >
                 {content.title}
               </Heading>
               <Text
                 variant="large"
-                className="absolute 2xl:top-[15rem] 2xl:left-[10rem] top-[11rem] right-0 left-0 bottom-0 m-auto  text-white font-kanit"
+                className="absolute 2xl:top-[15rem] top-[11rem] right-0 left-0 bottom-0 m-auto  text-white font-kanit"
               >
                 {content.subtitle}
               </Text>
