@@ -18,7 +18,7 @@ const ContactForm = () => {
     );
   }
   return (
-    <div className="max-w-2xl m-auto my-[5rem]">
+    <div className="max-w-2xl m-auto my-[5rem] px-5">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
