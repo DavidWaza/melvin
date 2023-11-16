@@ -13,12 +13,11 @@ const ContactForm = () => {
         <Text variant="small" className="text-center">
           An email will be sent to your inbox shortly
         </Text>
-        ;
       </div>
     );
   }
   return (
-    <div className="max-w-2xl m-auto my-[5rem] px-5">
+    <div className="max-w-2xl m-auto my-[10rem] px-5">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
