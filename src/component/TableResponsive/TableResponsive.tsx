@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from "react";
+import React, { useState, useEffect, FC } from "react";
 
 interface Currency {
   base: string;
@@ -26,18 +26,18 @@ const getCurrency = async (): Promise<Currency[]> => {
       return {
         base: baseCurrency as string,
         currencyCode,
-        purchase: rate as number,
-        selling: rate + 0.05, 
+        purchase: parseFloat(rate.toFixed(3)) ,
+        selling: parseFloat(rate + 0.05.toFixed(3)),
       };
     });
 
   return filteredCurrencyArray;
 };
 
-const TableResponsive:FC = () => {
+const TableResponsive: FC = () => {
   const [currency, setCurrency] = useState<Currency[]>([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchCurrency = async () => {
       const fetchedCurrency = await getCurrency();
       setCurrency(fetchedCurrency);
@@ -63,7 +63,6 @@ const TableResponsive:FC = () => {
         <tbody>
           {currency.map((currencyItem) => (
             <tr key={currencyItem.currencyCode}>
-            
               <td className="py-6 px-4 border-b text-center font-bold">
                 {currencyItem.currencyCode}
               </td>
