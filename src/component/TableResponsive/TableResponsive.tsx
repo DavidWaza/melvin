@@ -26,8 +26,8 @@ const getCurrency = async (): Promise<Currency[]> => {
       return {
         base: baseCurrency as string,
         currencyCode,
-        purchase: parseFloat(rate.toFixed(3)) ,
-        selling: parseFloat(rate + 0.05.toFixed(3)),
+        purchase: parseFloat(rate.toFixed(3)),
+        selling: parseFloat(rate + 0.05),
       };
     });
 
@@ -67,10 +67,10 @@ const TableResponsive: FC = () => {
                 {currencyItem.currencyCode}
               </td>
               <td className="py-6 px-4 border-b text-center">
-                {currencyItem.purchase}
+                {currencyItem.purchase.toFixed(3)}
               </td>
               <td className="py-6 px-4 border-b text-center">
-                {currencyItem.selling}
+                {currencyItem.selling.toFixed(3)}
               </td>
             </tr>
           ))}
