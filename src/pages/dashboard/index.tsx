@@ -18,7 +18,7 @@ import { Text } from "@/src/component/Typhography/Typography";
 
 const Dashboard = () => {
   return (
-    <div className="my-10">
+    <div>
       <Header>
         <Navbar />
         <UserNav />
@@ -57,9 +57,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$45,231.89</div>
-                <p className="text-xs text-black">
-                  +20.1% from last month
-                </p>
+                <p className="text-xs text-black">+20.1% from last month</p>
               </CardContent>
             </Card>
             <Card className="p-10 rounded-lg bg-[#B8DAFE]">
@@ -84,9 +82,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+2350</div>
-                <p className="text-xs text-black">
-                  +180.1% from last month
-                </p>
+                <p className="text-xs text-black">+180.1% from last month</p>
               </CardContent>
             </Card>
             <Card className="p-10 rounded-lg bg-[#F9B799]">
@@ -108,9 +104,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+12,234</div>
-                <p className="text-xs text-black">
-                  +19% from last month
-                </p>
+                <p className="text-xs text-black">+19% from last month</p>
               </CardContent>
             </Card>
             <Card className="p-10 rounded-lg bg-[#46649c]">
@@ -133,9 +127,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+573</div>
-                <p className="text-xs text-black">
-                  +201 since last hour
-                </p>
+                <p className="text-xs text-black">+201 since last hour</p>
               </CardContent>
             </Card>
           </div>
