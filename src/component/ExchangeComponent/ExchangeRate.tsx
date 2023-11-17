@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "../Typhography/Typography";
 import TableResponsive from "../TableResponsive/TableResponsive";
+import { Button } from "@/component/ui/button";
 
 const ExchangeRate = () => {
   return (
