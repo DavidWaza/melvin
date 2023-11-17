@@ -18,8 +18,10 @@ const ContactForm = () => {
   }
   return (
     <div className="max-w-2xl m-auto my-[10rem] px-5">
-      <Heading variant="large" className="font-kanit text-center">Credit Agric</Heading>
-      <Text className="text-center mb-10">Sign Up</Text>
+      <Heading variant="large" className="font-kanit text-center">
+        Credit Agric
+      </Heading>
+      <Text className="text-center mb-10 font-lexend">Sign Up</Text>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -88,7 +90,7 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={state.submitting}
-            className={`border border-slate-600 px-4 py-2  text-white ${!state.submitting ? 'bg-slate-200 cursor-not-allowed text-black' : 'bg-blue-800'}`}
+            className={`border border-slate-600 bg-blue-800 px-4 py-2 text-white`}
           >
             Submit
           </button>
