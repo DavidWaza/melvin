@@ -1,11 +1,14 @@
 import React from "react";
 import Container from "@/src/component/Container/Container";
 import { Title, Text } from "@/src/component/Typhography/Typography";
+import Header from "@/src/component/Navbar/Header";
 import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="mt-[5rem] mb-[3rem]">
+    <>
+      <Header />
+      <div className="mt-[5rem] mb-[3rem]">
       <Container>
         <Title>Contacts</Title>
         <div className="my-[3rem]">
@@ -58,6 +61,8 @@ const Contact = () => {
         </div>
       </Container>
     </div>
+    </>
+   
   );
 };
 

@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <Header />
       <div className="fixed z-50 top-[50%] right-[40px] bg-slate-300 p-3 rounded-full w-[17.5%] lg:w-[5%]">
         <div className=" btn-anime">
           <button
@@ -43,8 +42,6 @@ export default function App({ Component, pageProps }: AppProps) {
             </button>
           </div>
           </>
-         
-          
         )}
       </div>
       <Component {...pageProps} />
