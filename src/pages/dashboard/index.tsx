@@ -37,7 +37,7 @@ const Dashboard = () => {
         </TabsList>
         <TabsContent value="overview" className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="p-10 rounded-lg">
+            <Card className="p-10 rounded-lg bg-[#BCA8EE]">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium ">
                   Total Revenue
@@ -50,19 +50,19 @@ const Dashboard = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  className="h-4 w-4 text-muted-foreground"
+                  className="h-4 w-4 text-black"
                 >
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$45,231.89</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-black">
                   +20.1% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-10 rounded-lg">
+            <Card className="p-10 rounded-lg bg-[#B8DAFE]">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                   Subscriptions
@@ -75,7 +75,7 @@ const Dashboard = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  className="h-4 w-4 text-muted-foreground"
+                  className="h-4 w-4 text-black "
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
@@ -84,12 +84,12 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+2350</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-black">
                   +180.1% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-10 rounded-lg">
+            <Card className="p-10 rounded-lg bg-[#F9B799]">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Sales</CardTitle>
                 <svg
@@ -100,7 +100,7 @@ const Dashboard = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  className="h-4 w-4 text-muted-foreground"
+                  className="h-4 w-4 text-black"
                 >
                   <rect width="20" height="14" x="2" y="5" rx="2" />
                   <path d="M2 10h20" />
@@ -108,12 +108,12 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+12,234</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-black">
                   +19% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="p-10 rounded-lg">
+            <Card className="p-10 rounded-lg bg-[#46649c]">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                   Active Now
@@ -126,14 +126,14 @@ const Dashboard = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  className="h-4 w-4 text-muted-foreground"
+                  className="h-4 w-4 text-black"
                 >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+573</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-black">
                   +201 since last hour
                 </p>
               </CardContent>
