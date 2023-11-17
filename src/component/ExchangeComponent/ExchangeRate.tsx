@@ -5,7 +5,7 @@ import TableResponsive from "../TableResponsive/TableResponsive";
 const ExchangeRate = () => {
   return (
     <div className=" w-full lg:max-w-2xl m-auto lg:-mt-[10rem] mt-[2rem] border">
-      <div className="bg-base-100 h-[10rem] p-10  z-10 relative ">
+      <div className="bg-black h-[10rem] p-10  z-10 relative ">
         <Text
           variant="large"
           className="text-white font-lexend border-l-2 px-2"

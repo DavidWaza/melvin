@@ -5,8 +5,6 @@ import Image from "next/image";
 interface Article {
   title: string;
   author: string;
-  // data?:string
-  // Add other properties as needed
 }
 
 interface NewsProps {
