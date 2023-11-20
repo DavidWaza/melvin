@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Header from "../component/Navbar/Header";
 import Footer from "../component/Footer/Footer";
 import { useState } from "react";
+import { Heading, Text } from "../component/Typhography/Typography";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [toggle, setToggle] = useState(false);
@@ -44,7 +45,11 @@ export default function App({ Component, pageProps }: AppProps) {
           </>
         )}
       </div>
-      <Component {...pageProps} />
+      {/* <Component {...pageProps} /> */}
+      <div className="h-full justify-center items-center py-[20rem]">
+      <Heading variant="large" className="text-center">This Page is currently under maintenance</Heading>
+      <Text className="text-center mt-4">Please contact admin</Text>
+      </div>
       <Footer />
     </div>
   );
