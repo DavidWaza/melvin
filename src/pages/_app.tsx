@@ -12,18 +12,35 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="fixed z-50 top-[50%] right-[40px] bg-slate-300 p-3 rounded-full w-[17.5%] lg:w-[5%]">
         <div className=" btn-anime">
           <button
-            className="p-4 bg-green-800 rounded-full"
+            className="p-4 bg-white rounded-full"
             onClick={() => setToggle(!toggle)}
           >
+           {!toggle ? (
+             <img
+             src="/assets/contact-icon.png"
+             alt=""
+             className="w-full h-auto"
+           />
+           ): (
+            <img
+            src="/assets/cancel-icon.png"
+            alt=""
+            className="w-full h-auto"
+          />
+           )}
+          </button>
+        </div>
+        {toggle && (
+          <>
+          <div className="my-2 btn-anime">
+            <button className="p-4 bg-green-800 rounded-full">
             <img
               src="/assets/whatsapp.png"
               alt=""
               className="w-full h-auto"
             />
-          </button>
-        </div>
-        {toggle && (
-          <>
+            </button>
+          </div>
            <div className="my-2 btn-anime">
             <button className="p-4 bg-black rounded-full">
               <img
@@ -45,11 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </>
         )}
       </div>
-      {/* <Component {...pageProps} /> */}
-      <div className="h-full justify-center items-center py-[20rem]">
-      <Heading variant="large" className="text-center">This Page is currently under maintenance</Heading>
-      <Text className="text-center mt-4">Please contact admin</Text>
-      </div>
+      <Component {...pageProps} />
       <Footer />
     </div>
   );
