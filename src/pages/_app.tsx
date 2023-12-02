@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </button>
         </div>
         {toggle && (
-          <>
+          <div className="ease-in duration-300 transition-all">
           <div className="my-2 btn-anime">
             <button className="p-4 bg-green-800 rounded-full">
             <img
@@ -59,7 +59,7 @@ export default function App({ Component, pageProps }: AppProps) {
               />
             </button>
           </div>
-          </>
+          </div>
         )}
       </div>
       <Component {...pageProps} />
