@@ -1,76 +1,62 @@
-import {
-    Avatar,
-    AvatarFallback,
-    AvatarImage,
-  } from "@/component/ui/avatar"
-import { Text } from "@/src/component/Typhography/Typography"
-  
+import { Avatar, AvatarFallback, AvatarImage } from "@/component/ui/avatar";
+import { Text } from "@/src/component/Typhography/Typography";
+
+const recentSalesCustomers = [
+  {
+    avatar: "OM",
+    name: "Olivia Martin",
+    date: "2 Oct, 2023",
+    amount: "+ $1,999.00",
+  },
+  {
+    avatar: "OM",
+    name: "Olivia Martin",
+    date: "2 Oct, 2023",
+    amount: "+ $1,999.00",
+  },
+  {
+    avatar: "OM",
+    name: "Olivia Martin",
+    date: "2 Oct, 2023",
+    amount: "+ $1,999.00",
+  },
+  {
+    avatar: "OM",
+    name: "Olivia Martin",
+    date: "2 Oct, 2023",
+    amount: "+ $1,999.00",
+  },
+  {
+    avatar: "OM",
+    name: "Olivia Martin",
+    date: "2 Oct, 2023",
+    amount: "+ $1,999.00",
+  },
+];
 const RecentSales = () => {
-    return (
-      <div className="space-y-8">
-        {/* <div className="flex items-center">
+  return (
+    <>
+      <div className="bg-[#181818] text-white p-5 text-lg text-center lg:text-left">Transaction History</div>
+    <div className="space-y-8 text-white">
+      {recentSalesCustomers.map(({ avatar, name, date, amount }, index) => (
+        <div
+          key={index}
+          className="flex items-center border-b border-slate-600 w-full py-10"
+        >
           <Avatar className="h-9 w-9">
             <AvatarImage src="/avatars/01.png" alt="Avatar" />
-            <AvatarFallback>OM</AvatarFallback>
+            <AvatarFallback>{avatar}</AvatarFallback>
           </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">Olivia Martin</p>
-            <p className="text-sm text-muted-foreground">
-              olivia.martin@email.com
-            </p>
+          <div className="ml-4 space-y-1 ">
+            <p className="text-sm font-medium leading-none">{name}</p>
+            <p className="text-sm text-muted-foreground">{date}</p>
           </div>
-          <div className="ml-auto font-medium">+$1,999.00</div>
+          <div className="ml-auto font-medium">{amount}</div>
         </div>
-        <div className="flex items-center">
-          <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
-            <AvatarImage src="/avatars/02.png" alt="Avatar" />
-            <AvatarFallback>JL</AvatarFallback>
-          </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">Jackson Lee</p>
-            <p className="text-sm text-muted-foreground">jackson.lee@email.com</p>
-          </div>
-          <div className="ml-auto font-medium">+$39.00</div>
-        </div>
-        <div className="flex items-center">
-          <Avatar className="h-9 w-9">
-            <AvatarImage src="/avatars/03.png" alt="Avatar" />
-            <AvatarFallback>IN</AvatarFallback>
-          </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
-            <p className="text-sm text-muted-foreground">
-              isabella.nguyen@email.com
-            </p>
-          </div>
-          <div className="ml-auto font-medium">+$299.00</div>
-        </div>
-        <div className="flex items-center">
-          <Avatar className="h-9 w-9">
-            <AvatarImage src="/avatars/04.png" alt="Avatar" />
-            <AvatarFallback>WK</AvatarFallback>
-          </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">William Kim</p>
-            <p className="text-sm text-muted-foreground">will@email.com</p>
-          </div>
-          <div className="ml-auto font-medium">+$99.00</div>
-        </div>
-        <div className="flex items-center">
-          <Avatar className="h-9 w-9">
-            <AvatarImage src="/avatars/05.png" alt="Avatar" />
-            <AvatarFallback>SD</AvatarFallback>
-          </Avatar>
-          <div className="ml-4 space-y-1">
-            <p className="text-sm font-medium leading-none">Sofia Davis</p>
-            <p className="text-sm text-muted-foreground">sofia.davis@email.com</p>
-          </div>
-          <div className="ml-auto font-medium">+$39.00</div>
-        </div> */}
-        <Text variant="large" className="text-center">
-            No Recent Transaction
-        </Text>
-      </div>
-    )
-  }
-  export default RecentSales
+      ))}
+    </div>
+    </>
+  
+  );
+};
+export default RecentSales;

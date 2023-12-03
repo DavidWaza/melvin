@@ -46,7 +46,7 @@ const ContactForm = () => {
         />
         <p className="text-slate-500 flex justify-end">
           Forgot Password?{" "}
-          <span className="text-blue-600 font-bold ml-2">
+          <span className="text-blue-600 hover:text-blue-800 font-bold ml-2">
             <Link href={""}>Create Password</Link>
           </span>
         </p>
