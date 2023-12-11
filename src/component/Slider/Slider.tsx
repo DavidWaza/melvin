@@ -1,63 +1,35 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ExchangeRate from "../ExchangeComponent/ExchangeRate";
+import React from "react";
+import { useQuery } from "react-query";
+import axios from "axios";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import NewsComponent from "../NewsComponent/NewsComponent";
 
-// import required modules
+const fetchNewsData = async () => {
+  const response = await axios.get(
+    "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b9a63a854718406d8dea9e9284c1143c"
+  );
+  return response.data;
+};
 
-const Slider = () => {
+const SliderComponent = () => {
+  const { isLoading, data } = useQuery("newsdata", fetchNewsData);
   return (
     <div className="mt-[10rem]">
-      <Swiper
-         slidesPerView={1}
-         centeredSlides={false}
-         slidesPerGroupSkip={1}
-         grabCursor={true}
-         keyboard={{
-           enabled: true,
-         }}
-         breakpoints={{
-           769: {
-             slidesPerView: 2,
-             slidesPerGroup: 2,
-           },
-         }}
-         scrollbar={true}
-         navigation={true}
-         pagination={{
-           clickable: true,
-         }}
-         className="mySwiper"
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-       
-        modules={[Autoplay, Pagination, Navigation]}
-      >
-        <SwiperSlide>
-          <NewsComponent articles={[]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsComponent articles={[]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsComponent articles={[]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsComponent articles={[]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <NewsComponent articles={[]} />
-        </SwiperSlide>
-      </Swiper>
+      <div className="grid lg:grid-cols-3 gap-2">
+        {data?.articles.slice(0, 3).map((article: any) => (
+          <div key={article.id}>
+            {isLoading ? <h2>Loading Information</h2> : ""}
+            <NewsComponent
+              img={article.urlToImage}
+              author={article.author}
+              title={article.title}
+              description={article.description}
+              href={article.url}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
-export default Slider;
+export default SliderComponent;

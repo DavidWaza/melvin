@@ -1,60 +1,59 @@
 import React, { FC, useState, useEffect } from "react";
 import { Text } from "../Typhography/Typography";
 import Image from "next/image";
-import { useQuery } from "react-query";
-import axios from "axios";
-interface Article {
-  title: string;
-  author: string;
-}
+import Link from "next/link";
 
 interface NewsProps {
-  articles: Article[];
+  img: string;
+  author: string;
+  title: string;
+  description: string;
+  href: string;
 }
-
-const fetchNewsData = async () => {
-  const response = await axios.get(
-    "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b9a63a854718406d8dea9e9284c1143c"
-  );
-  return response.data;
-};
-
-const NewsComponent: FC<NewsProps> = () => {
-  const { isLoading, data } = useQuery("newsdata", fetchNewsData);
-  if (isLoading) {
-    return <h2>loading data</h2>;
-  }
+const NewsComponent: FC<NewsProps> = ({
+  img,
+  author,
+  title,
+  description,
+  href,
+}) => {
   return (
     <>
-      {data?.articles.map((article: any) => (
-        <div key={article.id}>
-          <div className="h-screen border border-slate-100">
-            <div className="bg-blue-800 p-5">
-              <Text
-                variant="small"
-                className="text-white uppercase text-center"
-                textWeight="bold"
-              >
-                Trending News
-              </Text>
-            </div>
-            <div>
-              {article.urlToImage && (
-                <img src={article.urlToImage} alt="img" className="h-20" />
-              )}
-            </div>
-            <div>
-              <Text
-                variant="small"
-                className="text-white uppercase text-center"
-                textWeight="bold"
-              >
-                {article.author}
-              </Text>
-            </div>
+      <div>
+        <div className="border border-slate-100 shadow-sm hover:shadow-none">
+          <div className="bg-blue-800 p-5">
+            <Text
+              variant="small"
+              className="text-white uppercase text-center"
+              textWeight="bold"
+            >
+              Trending News
+            </Text>
+          </div>
+          <div>
+            <Link href={href}>
+              <img src={img} alt="img" />
+            </Link>
+          </div>
+          <div className="py-10 px-3">
+            <Text
+              variant="small"
+              className="uppercase text-center"
+              textWeight="bold"
+            >
+              {title}
+            </Text>
+          </div>
+          <div className="text-center pb-10 px-10">
+            <Text variant="small">{description}</Text>
+          </div>
+          <div className="text-center pb-10 border-y">
+            <Text variant="extrasmall" textWeight="bold" className="pt-4">
+              {author}
+            </Text>
           </div>
         </div>
-      ))}
+      </div>
     </>
   );
 };

@@ -7,6 +7,7 @@ import BodyText from "../component/BodyText/BodyText";
 import Slider from "../component/Slider/Slider";
 import Header from "../component/Navbar/Header";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
