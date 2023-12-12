@@ -1,4 +1,5 @@
 import Container from "@/src/component/Container/Container";
+import Footer from "@/src/component/Footer/Footer";
 import Header from "@/src/component/Navbar/Header";
 import { Title, Text } from "@/src/component/Typhography/Typography";
 import Link from "next/link";
@@ -43,6 +44,7 @@ const index = () => {
           </div>
         </Container>
       </div>
+      <Footer />
     </>
   );
 };

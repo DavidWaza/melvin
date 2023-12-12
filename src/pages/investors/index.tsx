@@ -3,6 +3,7 @@ import { Title, Text } from "@/src/component/Typhography/Typography";
 import Link from "next/link";
 import React from "react";
 import Header from "@/src/component/Navbar/Header";
+import Footer from "@/src/component/Footer/Footer";
 
 const investorLists = [
   {
@@ -55,6 +56,7 @@ const index = () => {
           </div>
         </Container>
       </div>
+        <Footer />
     </>
   );
 };

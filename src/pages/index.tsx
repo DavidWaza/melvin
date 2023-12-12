@@ -6,6 +6,7 @@ import ExchangeRate from "../component/ExchangeComponent/ExchangeRate";
 import BodyText from "../component/BodyText/BodyText";
 import Slider from "../component/Slider/Slider";
 import Header from "../component/Navbar/Header";
+import Footer from "../component/Footer/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -66,6 +67,7 @@ export default function Home() {
         <Slider />
       </Container>
       <BodyText />
+      <Footer />
     </main>
   );
 }
