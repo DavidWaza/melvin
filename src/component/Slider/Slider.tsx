@@ -6,7 +6,7 @@ import NewsComponent from "../NewsComponent/NewsComponent";
 
 const fetchNewsData = async () => {
   const response = await axios.get(
-    "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b9a63a854718406d8dea9e9284c1143c"
+    "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=b9a63a854718406d8dea9e9284c1143c"
   );
   return response.data;
 };
